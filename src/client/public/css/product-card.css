@@ -1,0 +1,86 @@
+.card {
+  border: 0.1rem solid var(--primary);
+  border-radius: 0.5rem;
+  width: 18rem;
+  height: 12rem;
+  padding: 0.5rem;
+  display: grid;
+  gap: 0.5rem;
+  grid-template-areas:
+    'product-image product-image product-image brand'
+    'product-image product-image product-image price'
+    'product-image product-image product-image terms'
+    'part-code part-code part-code add-to-cart-qty'
+    'description description description add-to-cart-qty'
+    'description description description add-to-cart-confirm';
+}
+
+.card > div {
+  border-radius: 0.5rem;
+  background-color: var(--bg);
+}
+
+@keyframes preload-animation {
+  from {
+    background-position: 250%;
+  }
+  to {
+    background-position: -250%;
+  }
+}
+
+.card[data-loaded='false'],
+.card[data-loaded='false'] > div {
+  /* background-position: 100%; */
+  background-image: linear-gradient(
+    110deg,
+    transparent 0%,
+    transparent 30%,
+    #0002 50%,
+    transparent 70%,
+    transparent 100%
+  );
+  background-size: 250%;
+  animation-name: preload-animation;
+  animation-duration: 5000ms;
+  animation-direction: normal;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.card[data-loaded='false'] > div {
+  animation-direction: reverse;
+}
+
+.product-image {
+  grid-area: product-image;
+}
+
+.brand {
+  grid-area: brand;
+}
+
+.terms {
+  grid-area: terms;
+}
+
+.price {
+  grid-area: price;
+}
+
+.part-code {
+  grid-area: part-code;
+}
+
+.description {
+  grid-area: description;
+}
+
+.add-to-cart-qty {
+  grid-area: add-to-cart-qty;
+}
+
+.add-to-cart-confirm {
+  grid-area: add-to-cart-confirm;
+}

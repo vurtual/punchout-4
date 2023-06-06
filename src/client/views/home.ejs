@@ -1,3 +1,22 @@
 <%- include('partials/header') %>
-<h1>Homepage</h1>
+<header>
+  <h1>
+    Welcome to R&B Star
+    <div class="animated-border"></div>
+    <sub>Your electrical wholesaler</sub>
+  </h1>
+  <div id="account-functions">
+    <div class="btn-group">
+      <button class="btn cta" id="login">
+        login
+      </button>
+      <button class="btn cta" id="register">
+        register
+      </button>
+    </div>
+    <input type="search" id="search" class="search-field" data-show-icon="true">
+  </div>
+</header>
+<%- include('store') %>
+
 <%- include('partials/footer') %>
