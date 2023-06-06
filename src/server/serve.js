@@ -13,13 +13,13 @@ app.set('viewengine', 'ejs');
 app.use('/', router);
 app.use(express.static('src/client/public'));
 
-const launchServer = () => {
+async function launchServer() {
   try {
     app.listen(PORT);
     return `Server running at ${PROTOCOL}://${URL}:${PORT}`;
   } catch (error) {
     console.error(error);
   }
-};
+}
 
 module.exports = { launchServer };

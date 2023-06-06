@@ -1,3 +1,5 @@
+console.clear();
+
 const { connectToDB } = require('./server/data/connect-mongo-db');
 const { launchServer } = require('./server/serve');
 
