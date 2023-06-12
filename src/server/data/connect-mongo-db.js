@@ -29,9 +29,11 @@ function maintainConnection() {
     console.log('Attempting reconnection');
     let connected = false;
     const reload = true;
-    do {
-      connected = await connectToDB(reload);
-    } while (!connected);
+    setTimeout(async () => {
+      do {
+        connected = await connectToDB(reload);
+      } while (!connected);
+    }, 500);
   });
 
   mongoose.connection.on('error', error => {

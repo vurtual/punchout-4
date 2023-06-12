@@ -1,5 +1,6 @@
 console.clear();
 
+const { collections } = require('./server/data/models/Product');
 const { connectToDB } = require('./server/data/connect-mongo-db');
 const { launchServer } = require('./server/serve');
 

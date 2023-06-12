@@ -1,15 +1,9 @@
-<style>
-  .store {
-    padding: 1rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(18.6rem, 1fr));
-    gap: 10px;
-  }
-</style>
+<link rel="stylesheet" href="css/store.css">
+<!-- <link rel="stylesheet" href="css/product-card.css"> -->
+<script src="js/store.js" type="module"></script>
 <div class="store">
-  <%- include('partials/product-card') %>
-  <%- include('partials/product-card') %>
-  <%- include('partials/product-card') %>
-  <%- include('partials/product-card') %>
-  <%- include('partials/product-card') %>
+
 </div>
+<template id="product-card">
+  <%- include('partials/product-card') %>
+</template>

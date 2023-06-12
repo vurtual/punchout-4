@@ -1,23 +1,29 @@
+@import url('add-to-cart.css');
+
 .card {
   border: 0.1rem solid var(--primary);
   border-radius: 0.5rem;
-  width: 18rem;
-  height: 12rem;
-  padding: 0.5rem;
+  width: 23rem;
+  height: 16rem;
   display: grid;
-  gap: 0.5rem;
+  /* gap: 0.2rem; */
+  font-size: 1rem;
   grid-template-areas:
     'product-image product-image product-image brand'
-    'product-image product-image product-image price'
+    'product-image product-image product-image price-group'
     'product-image product-image product-image terms'
-    'part-code part-code part-code add-to-cart-qty'
-    'description description description add-to-cart-qty'
-    'description description description add-to-cart-confirm';
+    'part-code description description description'
+    'add-to-cart description description description';
+  /* 'part-code part-code part-code add-to-cart'
+    'description description description add-to-cart'
+    'description description description add-to-cart'; */
+  font-size: 0.8rem;
 }
 
-.card > div {
-  border-radius: 0.5rem;
+div {
+  border-radius: 0rem;
   background-color: var(--bg);
+  border: 1px solid var(--accent);
 }
 
 @keyframes preload-animation {
@@ -29,14 +35,13 @@
   }
 }
 
-.card[data-loaded='false'],
 .card[data-loaded='false'] > div {
   /* background-position: 100%; */
   background-image: linear-gradient(
     110deg,
     transparent 0%,
     transparent 30%,
-    #0002 50%,
+    var(--accent) 50%,
     transparent 70%,
     transparent 100%
   );
@@ -49,24 +54,22 @@
   animation-iteration-count: infinite;
 }
 
-.card[data-loaded='false'] > div {
-  animation-direction: reverse;
-}
-
 .product-image {
   grid-area: product-image;
+  border-top-left-radius: 0.5rem;
 }
 
 .brand {
   grid-area: brand;
+  border-top-right-radius: 0.5rem;
 }
 
 .terms {
   grid-area: terms;
 }
 
-.price {
-  grid-area: price;
+.price-group {
+  grid-area: price-group;
 }
 
 .part-code {
@@ -75,12 +78,10 @@
 
 .description {
   grid-area: description;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
 }
 
-.add-to-cart-qty {
-  grid-area: add-to-cart-qty;
-}
-
-.add-to-cart-confirm {
-  grid-area: add-to-cart-confirm;
+.add-to-cart {
+  grid-area: add-to-cart;
 }

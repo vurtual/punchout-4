@@ -1,0 +1,53 @@
+.add-to-cart > div.btn-group > button.btn,
+.add-to-cart > div,
+.add-to-cart > input.btn.add-to-cart-from-store-button.cta,
+.add-to-cart > button {
+  display: block;
+  width: 100%;
+
+  border-radius: 0;
+  border-width: 1px;
+  border-color: var(--accent);
+}
+
+.add-to-cart > div.btn-group > button.btn.increment-button,
+.add-to-cart > div.btn-group > button.btn.decrement-button {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.add-to-cart > div.btn-group > button.btn {
+  opacity: 0.4;
+}
+
+.add-to-cart > div.btn-group > button.btn:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.add-to-cart > div.btn-group > button.btn:hover[disabled] {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.add-to-cart > div.btn-group > button.btn.increment-button {
+  background-color: #7b9;
+}
+
+.add-to-cart > div.btn-group > button.btn.decrement-button {
+  background-color: #b79;
+}
+
+.add-to-cart > div.btn-group > button.btn.decrement-button[disabled] {
+  background-color: #b798;
+}
+
+.add-to-cart > div.btn-group > button.btn.increment-button[disabled] {
+  background-color: #7b98;
+}
+
+.add-to-cart > div.btn-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+}

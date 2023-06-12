@@ -23,8 +23,8 @@
 body {
   font-family: Montserrat, Verdana, Geneva, Tahoma, sans-serif;
   font-size: 21px;
-  /* padding: 1rem; */
-  background-color: var(--bg);
+  overflow: hidden;
+  background-color: var(--primary);
 }
 
 header {

@@ -1,11 +1,24 @@
-<link rel="stylesheet" href="css/product-card.css">
 <div class="card" data-loaded="false">
-  <div class="product-image">i</div>
-  <div class="brand">b</div>
-  <div class="price">p</div>
-  <div class="terms">t</div>
-  <div class="part-code">pc</div>
-  <div class="description">d</div>
-  <div class="add-to-cart-qty">q</div>
-  <div class="add-to-cart-confirm">c</div>
+  <div class="product-image"></div>
+  <div class="brand">
+    <h6>Brand</h6><span></span>
+  </div>
+  <div class="price-group">
+    <h6>Price</h6>
+    <span class="price"></span>
+    <span class="price-quantity"></span>
+    <span class="unit"></span>
+  </div>
+  <div class="terms">
+    <h6>Terms</h6><span></span>
+  </div>
+  <div class="part-code">
+    <h6>Part No.</h6><span></span>
+  </div>
+  <div class="description">
+    <h6>Description</h6><span></span>
+  </div>
+  <div class="add-to-cart">
+    <%- include('add-to-cart.ejs') %>
+  </div>
 </div>
